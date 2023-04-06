@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Mykopkarbsm</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="/mykopkarbsm/style/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <script type="text/javascript">
+        var message = "Function right click is Disabled!";
+
+        function clickIE4() {
+            if (event.button == 2) {
+                alert(message);
+                return false;
+            }
+        }
+
+        function clickNS4(e) {
+            if (document.layers || document.getElementById && !document.all) {
+                if (e.which == 2 || e.which == 3) {
+                    alert(message);
+                    return false;
+                }
+            }
+        }
+        if (document.layers) {
+            document.captureEvents(Event.MOUSEDOWN);
+            document.onmousedown = clickNS4;
+        } else if (document.all && !document.getElementById) {
+            document.onmousedown = clickIE4;
+        }
+        document.oncontextmenu = new Function("alert(message);return false");
+    </script>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top" data-aos="fade-down" aria-label="Navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/mykopkarbsm/index.html">
+                <img src="/mykopkarbsm/images/logo.png" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mykopkarbsm/index.html">Home </a>
+                    </li>
+                </ul>
+
+                <!-- Desktop Menu -->
+                <ul class="navbar-nav d-none d-lg-flex">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="/mykopkarbsm/images/icon-user.png" alt="" class="rounded-circle mr-2 profile-picture" />
+                            Hi, Raka
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Dashboard</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-inline-block mt-2" href="#">
+                            <img src="/mykopkarbsm/images/icon-cart-filled.svg" alt="" />
+                            <div class="cart-badge">3</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Menu -->
+                <ul class="navbar-nav d-block d-lg-none">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Hi, Raka
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-inline-block" href="#">
+                            Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content page-cart">
+        <section class="store-breadcrumbs" data-aos="fade-down" data-aos-delay="100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/mykopkarbsm/index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Cart
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="store-cart">
+            <div class="container">
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-12 table-responsive">
+                        <table class="table table-borderless table-cart" aria-describedby="Cart">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Name &amp; Seller</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Menu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 25%;">
+                                        <img src="/mykopkarbsm/images/product-cart-1.jpg" alt="" class="cart-image" />
+                                    </td>
+                                    <td style="width: 35%;">
+                                        <div class="product-title">Sofa Ternyaman</div>
+                                        <div class="product-subtitle">by Andi Sukka</div>
+                                    </td>
+                                    <td style="width: 35%;">
+                                        <div class="product-title">Rp 2.000.000</div>
+                                        <div class="product-subtitle">Rp</div>
+                                    </td>
+                                    <td style="width: 20%;">
+                                        <a href="#" class="btn btn-remove-cart">
+                                            Hapus
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 25%;">
+                                        <img src="/mykopkarbsm/images/product-cart-2.jpg" alt="" class="cart-image" />
+                                    </td>
+                                    <td style="width: 25%;">
+                                        <div class="product-title">Sneaker</div>
+                                        <div class="product-subtitle">by Raka Ardiansyah</div>
+                                    </td>
+                                    <td style="width: 25%;">
+                                        <div class="product-title">Rp 8.000.000</div>
+                                        <div class="product-subtitle">Rp</div>
+                                    </td>
+                                    <td style="width: 25%;">
+                                        <a href="#" class="btn btn-remove-cart">
+                                            Hapus
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 25%;">
+                                        <img src="/mykopkarbsm/images/product-cart-3.jpg" alt="" class="cart-image" />
+                                    </td>
+                                    <td style="width: 25%;">
+                                        <div class="product-title">Coffee Holder</div>
+                                        <div class="product-subtitle">by Addictex</div>
+                                    </td>
+                                    <td style="width: 25%;">
+                                        <div class="product-title">Rp 23.000</div>
+                                        <div class="product-subtitle">Rp</div>
+                                    </td>
+                                    <td style="width: 25%;">
+                                        <a href="#" class="btn btn-remove-cart">
+                                            Hapus
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="150">
+                    <div class="col-12">
+                        <hr />
+                    </div>
+                    <div class="col-12">
+                        <h2 class="mb-4">Rincian Pengiriman</h2>
+                    </div>
+                </div>
+                <div class="row mb-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="addressOne">Alamat 1</label>
+                            <input type="text" class="form-control" id="addressOne" aria-describedby="emailHelp" name="addressOne" value="Setra Duta Cemara" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="addressTwo">Alamat 2</label>
+                            <input type="text" class="form-control" id="addressTwo" aria-describedby="emailHelp" name="addressTwo" value="Blok B2 No. 34" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="province">Provinsi</label>
+                            <select name="province" id="province" class="form-control">
+                                <option value="West Java">West Java</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <select name="city" id="city" class="form-control">
+                                <option value="Bandung">Bandung</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="postalCode">Kode Pos</label>
+                            <input type="text" class="form-control" id="postalCode" name="postalCode" value="40512" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="country">Negara</label>
+                            <input type="text" class="form-control" id="country" name="country" value="Indonesia" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="mobile">Handphone</label>
+                            <input type="text" class="form-control" id="mobile" name="mobile" value="+628 2020 11111" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="150">
+                    <div class="col-12">
+                        <hr />
+                    </div>
+                    <div class="col-12">
+                        <h2>Opsi Pengiriman</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="country">Berat Total</label>
+                            <div type="text" class="form-control" id="country" name="country">23kg</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="mobile">Pilih Kurir</label>
+                            <select name="city" id="city" class="form-control">
+                                <option value="JNE">JNE</option>
+                                <option value="JNE">JNT</option>
+                                <option value="JNE">SI CEPAT</option>
+                                <option value="JNE">TIKI</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row" data-aos="fade-up" data-aos-delay="150">
+                    <div class="col-12">
+                        <hr />
+                    </div>
+                    <div class="col-12">
+                        <h2>Informasi Pembayaran</h2>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-4 col-md-2">
+                        <div class="product-title">Rp 10.000</div>
+                        <div class="product-subtitle">PPN</div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <div class="product-title">Rp 2.500</div>
+                        <div class="product-subtitle">Asuransi Produk(Otomatis)</div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="product-title">Rp 150.000</div>
+                        <div class="product-subtitle">Kirim ke Jakarta</div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="product-title text-success">Rp 10.150.500</div>
+                        <div class="product-subtitle">Total</div>
+                    </div>
+                    <div class="col-8 col-md-3">
+                        <a href="/mykopkarbsm/success.html" class="btn btn-success mt-4 px-4 btn-block">
+                            Checkout Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="pt-4 pb-2">
+                        2021 Copyright Store. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/mykopkarbsm/vendor/jquery/jquery.slim.min.js"></script>
+    <script src="/mykopkarbsm/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="/mykopkarbsm/script/navbar-scroll.js"></script>
+</body>
+
+</html>
